@@ -81,9 +81,9 @@ else
   echo file not found
   ls -lh /tmp
 fi
-# stdout=$(cat /tmp/outFile)
+stdout=$(cat /tmp/outFile)
 # stderr=$(cat /tmp/errFile)
-# echo "stdout=${stdout//$'\n'/\\n}" >> $GITHUB_OUTPUT
+echo "out=${stdout//$'\n'/\\n}" >> $GITHUB_OUTPUT
 # echo "stderr=${stderr//$'\n'/\\n}" >> $GITHUB_OUTPUT
-echo "out=%s\n" "$(cat /tmp/outFile)" >> $GITHUB_OUTPUT
-echo "err=%s\n" "$(cat /tmp/errFile)" >> $GITHUB_OUTPUT
+# echo "out=%s\n" "$(cat /tmp/outFile)" >> $GITHUB_OUTPUT
+# echo "err=%s\n" "$(cat /tmp/errFile)" >> $GITHUB_OUTPUT
