@@ -74,10 +74,10 @@ inputs:
     description: "Request a pseudo-terminal from the server."
 
 outputs:
-  stdout:
+  out:
     description: 'Standard output of the executed commands.'
     value: ${{ steps.ssh.outputs.out }}
-  stderr:
+  err:
     description: 'Standard error of the executed commands.'
     value: ${{ steps.ssh.outputs.err }}
 
