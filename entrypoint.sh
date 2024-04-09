@@ -85,3 +85,5 @@ fi
 # stderr=$(cat /tmp/errFile)
 # echo "stdout=${stdout//$'\n'/\\n}" >> $GITHUB_OUTPUT
 # echo "stderr=${stderr//$'\n'/\\n}" >> $GITHUB_OUTPUT
+printf "out=%s\n" "$(cat /tmp/outFile)" >> $GITHUB_OUTPUT
+printf "err=%s\n" "$(cat /tmp/errFile)" >> $GITHUB_OUTPUT
