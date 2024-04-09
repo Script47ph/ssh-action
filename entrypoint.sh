@@ -63,4 +63,4 @@ TARGET="${GITHUB_ACTION_PATH}/${CLIENT_BINARY}"
 echo "Will download ${CLIENT_BINARY} from ${DOWNLOAD_URL_PREFIX}"
 curl -fL --retry 3 --keepalive-time 2 "${DOWNLOAD_URL_PREFIX}/${CLIENT_BINARY}" -o ${TARGET}
 chmod +x ${TARGET}
-sh -c "${TARGET} $*" | printf "outtest=%s\n" "$(cat)" >> $GITHUB_OUTPUT
+sh -c "${TARGET} $*"
