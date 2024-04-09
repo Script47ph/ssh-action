@@ -76,8 +76,10 @@ inputs:
 outputs:
   stdout:
     description: 'Standard output of the executed commands.'
+    value: ${{ steps.ssh.outputs.out }}
   stderr:
     description: 'Standard error of the executed commands.'
+    value: ${{ steps.ssh.outputs.err }}
 
 runs:
   using: "composite"
