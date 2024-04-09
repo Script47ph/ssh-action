@@ -71,8 +71,12 @@ chmod +x ${TARGET}
 
 if [ -n "/tmp/outFile" ]; then
   echo outFile exists
+  ls -lh /tmp
+  cat /tmp/outFile
 elif [ -n "/tmp/errFile" ]; then
   echo errFile exists
+  ls -lh /tmp
+  cat /tmp/errFile
 else
   echo file not found
   ls -lh /tmp
